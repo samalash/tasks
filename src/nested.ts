@@ -274,15 +274,7 @@ export function duplicateQuestionInArray(
     newArray.splice(
         targetQuestionIndex + 1,
         0,
-        duplicateQuestion(newId, otherFindQuestion(questions, targetId))
+        duplicateQuestion(newId, questions[targetQuestionIndex])
     );
     return newArray;
-}
-
-function otherFindQuestion(questions: Question[], id: number): Question {
-    return questions.reduce(
-        (result: Question, current: Question): Question =>
-            current.id === id ? current : result,
-        makeBlankQuestion(5, "hi", "multiple_choice_question")
-    );
 }
