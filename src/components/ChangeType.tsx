@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import { QuestionType } from "../interfaces/question";
+import { Question, QuestionType } from "../interfaces/question";
 
 export function ChangeType(): JSX.Element {
     const [questionType, setQuestionType] = useState<QuestionType>(
